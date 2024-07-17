@@ -1,0 +1,215 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* ROOT items */
+:root{
+    --p-and-a:#333131;
+    --hover:blue;
+    --for-phone:black;
+    --shado:rgb(48, 46, 46);
+
+    --p-and-btn-font:1.3rem;
+    --head-font:2.5rem;
+    --btn-shado:3px 2px 6px 0px var(--shado),  inset 2.7px 1.8px 1px 0px #ffffffd2;
+}
+/* ROOT items */
+body{
+    background: linear-gradient(100deg,rgba(135, 207, 235, 0.5), rgba(76, 76, 250, 0.459));
+}
+/* commin style */
+.display-flex{
+    display:flex
+}
+.span-color{
+    color: #00c3ff;
+}
+/* commin style */
+
+
+
+/* not for big devise */
+.phone_menu{
+    display: none;
+}
+/* not for big devise */
+
+
+
+
+
+
+
+/* ------------------nav START----------------- */
+.header_container{
+    height: 100vh;
+}
+.nav_container{
+    justify-content: space-between;
+    width: 90%;
+    margin: 0px auto;
+    height: 70px;
+    align-items: center;
+}
+.nav_container>h1{
+    font-size: 2.5rem;
+}
+.nav_items{
+    justify-content: space-around;
+    width: 57%;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: var(--p-and-a);
+    font-size: 1.2rem;
+    transition: 0.1s ;
+}
+.nav_items > li >a:hover{
+    color: var(--hover);
+}
+/* ------------------nav END----------------- */
+
+/* ------------------banner START----------------- */
+.banner_card{
+    background:  linear-gradient(90deg,rgb(155, 216, 240),rgba(0, 0, 255, 0.664));
+    box-shadow: 5px 5px 10px 0px var(--shado),  inset 2px 1px 2px 0px #caf7ff;
+    width: 90%;
+    height: 100%;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+.left_card{
+    width: 50%;
+    margin-top: 10px;
+    padding: 25px 20px;
+}
+.left_card > div > h1{
+    font-size: var(--head-font);
+}
+.left_card > div > p{
+    font-size: var(--p-and-btn-font);
+}
+.left_card > div > p::first-letter{
+    font-size: 3rem;
+    color:whitesmoke;
+}
+.icon_container{
+    margin:50px;
+    display: flex;
+    justify-content: space-around;
+}
+.icon_container > a > img{
+    border-radius: 100%;
+    box-shadow: var(--btn-shado);
+    width: 90%;
+}
+.icon_container > a > img:hover{
+    opacity: 0.4;
+    box-shadow: none;
+}
+.btn_container{
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.btn_container > a > button{
+    border: none;
+    padding: none;
+    background: none;
+    font-size: var(--p-and-btn-font);
+}
+.btn_container > a{
+    padding: 13px 45px;
+    background: #d3cccc;
+    box-shadow: var(--btn-shado);
+    border-radius: 5px;
+}
+.btn_link:hover{
+    box-shadow:none;
+    border: 3px inset rgb(255, 255, 255);
+    padding: 10px 42px;
+    transition: 0.09s ease-in;
+}
+.right_card{
+    width: 50%;
+}
+/* ------------------banner END----------------- */
+
+
+
+
+
+
+
+
+
+
+/* -------------------for PHINE--------------- */
+
+.phone_menu{
+    background: var(--for-phone);
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px 1px var(--shado) ;
+}
+
+
+
+
+/* lowest */
+@media screen and (max-width:576px) {
+    .banner_card{
+        flex-direction: column;
+        align-items: center;
+    }    
+    .left_card{
+        justify-content: center;
+    }
+    .icon_container{
+        margin: 20px;
+        gap: 10px;
+    }
+    .icon_container > a > img{
+        width: 27px;
+    }
+    .btn_container{
+        flex-direction: column;
+    }
+    .btn_container > a{
+        padding: 8px 15px;
+    }
+    
+}
+
+
+
+
+
+/* mid */
+@media screen and (max-width:600px) {
+    .nav_items > li >a{
+        display: none;
+    }
+    .phone_menu{
+        display: inherit;
+    }
+}
+
+
+
+
+
+
+/* mid learg */
+@media screen and (min-width:576px) and (max-width:992px) {
+    .banner_card{
+        flex-direction: column;
+        align-items: center;
+    }    
+    .left_card{
+        justify-content: center;
+    }
+}
